@@ -569,6 +569,59 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: purple;
 }
 
+.additems {
+   padding:20px;
+   background: #CCCCFF;
+   background: -webkit-linear-gradient(top left, #CCCCFF, #72A0C1); 
+   background: -o-linear-gradient(bottom right, #CCCCFF, #72A0C1); 
+   background: -moz-linear-gradient(bottom right, #CCCCFF, #72A0C1); 
+   background: linear-gradient(to bottom right, #CCCCFF, #72A0C1);
+   
+}
+.additemsbox {
+  width:1150px;
+  height:600px;
+  background-color:#e5e4e2;
+  margin:0 auto;
+  border-radius:8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+
+
+.editable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.editable-table th,
+.editable-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.editable-table input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  /* Additional styles specific to input[type="text"] */
+}
+
+.save-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
 
 /*  */
 /*  *********************************************************************** */
