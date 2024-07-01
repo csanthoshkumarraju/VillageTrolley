@@ -331,6 +331,9 @@ body {
   transform: translateY(2px);
 }
 
+.analitics-box p {
+  margin: 5px 0; /* Adjust paragraph margins */
+}
 /*  */
 
 
@@ -569,13 +572,22 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: purple;
 }
 
+.additemsguide {
+    padding:10px;
+    color:green;
+    font-size:20px;
+    font-family:Tahoma;
+}
+
+
 .additems {
-   padding:20px;
+   padding:25px;
    background: #CCCCFF;
    background: -webkit-linear-gradient(top left, #CCCCFF, #72A0C1); 
    background: -o-linear-gradient(bottom right, #CCCCFF, #72A0C1); 
    background: -moz-linear-gradient(bottom right, #CCCCFF, #72A0C1); 
    background: linear-gradient(to bottom right, #CCCCFF, #72A0C1);
+   text-align: justify;
    
 }
 .additemsbox {
@@ -627,3 +639,223 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 /*  *********************************************************************** */
 /* *********************************************************************** */
 /* shop owner register */
+
+/*  ********************************************************************** */
+/* Billing section */
+/* *********************************************************************** */
+
+/* General styles */
+
+/* General styles */
+
+
+/* Billing section styles */
+.billing_section {
+    padding: 25px;
+    background-color: #FF00BF;
+    background: linear-gradient(to bottom right, #FF00BF 0%, #007FFF 50%, #FF5733 100%);
+    text-align: center; /* Center content horizontally */
+}
+
+.billingbox_guide {
+    color: red;
+    padding: 15px;
+    font-family: Georgia;
+    text-align: justify;
+    margin-left: 120px;
+}
+
+.billing_box {
+    background-color: #ecf3f9;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, #F2EBDD 0%, #D7FFD9 100%);
+    border-radius: 8px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bgmar {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Search input and button styles */
+.search-container {
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px; /* Adjust spacing */
+}
+
+.product-search {
+    width: calc(100% - 40px); /* Adjust width for icon */
+    padding: 10px 40px 10px 10px; /* Adjust padding for icon */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.search-button {
+    position: absolute;
+    right: 15px;
+    top: 5.5px;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+/* Table styles */
+.billtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.billtable th, .billtable td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.billtable th {
+    background-color: #f2f2f2;
+}
+
+.billtable .product-name {
+    width: 25%; /* Adjust width as needed */
+}
+
+.billtable .quantity, .billtable .price, .billtable .place {
+    width: 15%; /* Adjust width as needed */
+}
+
+.billtable .table-row {
+    background-color: #f9f9f9;
+}
+
+/* Total section styles */
+.total-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    text-align: center; /* Center align text */
+    display: inline-block; /* Ensures inline-block behavior */
+    width: auto; /* Adjust width as needed */
+}
+
+.total-section div {
+    margin-bottom: 10px;
+}
+
+.total-section span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Bill button styles */
+
+.bill-button {
+    padding: 15px; /* Adjusted padding */
+    background-color: #228B22;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px auto; /* Centers button */
+    width: 100px;
+    height: 40px;
+    border: none; 
+    outline: none; 
+    position: relative; 
+   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.bill-button::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position relative to .bill-button */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Behind the button content */
+    border-radius: inherit; /* Inherit border-radius from .bill-button */
+    background-image: linear-gradient(to right, #007FFF, #FF00BF, #FF5733); /* Gradient background */
+}
+.bill-button:hover {
+    background-color: #0055FF;
+}
+
+/*  ********************************************************************** */
+/* Billing section */
+/* *********************************************************************** */
+
+
+/*  ********************************************************************** */
+/* Analytics section */
+/* *********************************************************************** */
+
+
+.analitycs_section {
+  padding: 25px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, #98FB98, #B2BEB5, #EADDCA, #E1C16E);
+  max-width: 1600px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  min-height: 800px;
+}
+
+.analitics-box {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, 410px);
+  grid-template-rows: 370px 370px;
+  justify-content: center; /* Center grid items horizontally */
+}
+
+.analitics-box > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  border-radius: 8px;
+/*   background-color: #f0f0f0; */
+  background: linear-gradient(to bottom right, #4B0082,#FF69B4,#E30B5C);
+  width: 410px;
+  height: 370px;
+  font-family: American Typewriter; 
+}
+
+.analitics-box > div:nth-child(odd) {
+/*   background-color: white; */
+  background: linear-gradient(to bottom right, #00308F, #0000FF,#FFD700 );
+}
+
+.analitics-box > div h6,
+.analitics-box > div p {
+  text-align: center; /* Center text within the box */
+  margin: 0; /* Remove default margins */
+}
+
+/*  ********************************************************************** */
+/* Analytics section */
+/* *********************************************************************** */
