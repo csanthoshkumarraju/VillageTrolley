@@ -260,7 +260,7 @@
 </div>
 <section class="additems">
   <div class="additemsbox">
-   
+  <h5 class="additemsguide">Enter the name of the product in the 'Product Name' field, current price of the product in 'Price' (modifiable later), specify the quantity, and indicate the location of the product. Divide the store into sections for each category and organize them sequentially to facilitate easy identification. Additionally, specify the section and exact position of the product for fast identification purposes in the designated 'Place' field.</h5>
   <table class="editable-table">
   <thead>
     <tr>
@@ -305,7 +305,143 @@
   </div>
 </section>
 
+<!-- Billing -->
+<!-- *********************************************************************** -->
+<!--  -->
 
+<div class='register'>
+   <p>Billing Form</p>
+</div>
+
+<section class="billing_section">
+    <div class="billing_box">
+        <h6 class="billingbox_guide"><marquee class="bgmar" scrollamount="2">Enter all billing items individually using the search option. After entering all items, click 'Bill'.</marquee></h6>
+        <div class="search-container">
+            <input type="text" id="productNameSearch" class="product-search" placeholder="Search...">
+            <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <table class="billtable">
+            <thead>
+                <tr>
+                    <th class="product-name">Product Name</th>
+                    <th class="quantity">Quantity</th>
+                    <th class="price">Price</th>
+                    <th class="place">Place</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row">
+                    <td class="product-name">Product 1</td>
+                    <td class="quantity-editable" contenteditable="true">10</td>
+                    <td class="price-value">₹ 19.99</td>
+                    <td class="place-value">New York</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="product-name">Product 2</td>
+                    
+                    <td class="quantity-editable" contenteditable="true">10</td>
+                    <td class="price-value">₹ 12.50</td>
+                    <td class="place-value">Los Angeles</td>
+                </tr>
+                <!-- Additional rows can be dynamically added using JavaScript -->
+            </tbody>
+        </table>
+        <div class="total-section">
+            <div>Total Bill: <span id="totalBillAmount">₹ 0.00</span></div>
+            <div>Total Amount: <span id="totalAmount">₹ 0.00</span></div>
+        </div>
+        <button class="bill-button">Bill</button>
+    </div>
+</section>
+
+
+<!-- Billing -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+<!-- Analytics -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+<div class='register'>
+   <p>Analytics</p>
+</div>
+
+<script>
+        // Function to update the date and time every second
+        function updateDateTime() {
+            // Get the current date and time
+            let now = new Date();
+            let date = now.toLocaleDateString();
+            let time = now.toLocaleTimeString();
+
+            // Format the date and time with seconds
+            let dateTimeWithSeconds = `${date} ${time}`;
+
+            // Update the content of the <p> element with id "datetime"
+            document.getElementById("datetime").textContent = dateTimeWithSeconds;
+        }
+
+        // Update the date and time initially when the page loads
+        updateDateTime();
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+    </script>
+
+<section class="analitycs_section">
+  <div class="analitics-box">  
+    <div>
+      <h5><u>Daily</u></h5>
+      <p id="datetime"></p>
+      <p>current Time</p>
+      <p>Sold Today : ₹ 1000</p>
+      <p>Products sold: 100</p>
+      <p>Profit : ₹ 30000</p>
+    </div>
+    <div>
+      <h5><u>Monthly</u></h5>
+      <p id="current Month"></p>
+      <p>Set Current Time</p>
+      <p>Sold This month : ₹ 1000</p>
+      <p>Products sold: 100</p>
+      <p>Profit : ₹ 30000</p>
+    </div>
+    <div>
+      <h5><u>Yearly</u></h5>
+      <p id="current Year"></p>
+      <p>Set Current Year</p>
+      <p>Sold This Year : ₹ 1000</p>
+      <p>Products sold: 100</p>
+      <p>Profit : ₹ 30000</p>
+    </div>
+    <div>
+        <h5><u>Profit</u></h5>
+        <p>Investment: ₹ 50000</p>
+        <p>Return : ₹ 80000</p>
+        <p>Profit : ₹ 30000</p>
+    </div>
+    <div>
+      <h5><u>Loss</u></h5>
+        <p>Investment: ₹ 50000</p>
+        <p>Return : ₹ 80000</p>
+        <p>Loss : ₹ 30000</p>
+    </div>
+    <div>
+      <h5> <u>Most & Least selling products</u></h5>
+      
+      <p>Most :- Oil,Eggs,Milk, </p>
+      <p>Chocolates,Drinks</p>
+      <p>Least :- Rice,Masala,<p>
+      </p>Jaggery,Dals</p>
+      </div>
+  </div>   
+</section>
+
+<!-- Analytics -->
+<!-- *********************************************************************** -->
+<!--  -->  
+  
 </body>
 </html>
 <!--  -->
