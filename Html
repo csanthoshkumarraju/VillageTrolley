@@ -316,9 +316,12 @@
 <section class="billing_section">
     <div class="billing_box">
         <h6 class="billingbox_guide"><marquee class="bgmar" scrollamount="2">Enter all billing items individually using the search option. After entering all items, click 'Bill'.</marquee></h6>
+        <button class="bill-button2">Low Stock Products</button>
         <div class="search-container">
+            
             <input type="text" id="productNameSearch" class="product-search" placeholder="Search...">
             <button class="search-button"><i class="fa fa-search"></i></button>
+            
         </div>
         <table class="billtable">
             <thead>
@@ -351,6 +354,7 @@
             <div>Total Amount: <span id="totalAmount">₹ 0.00</span></div>
         </div>
         <button class="bill-button">Bill</button>
+        
     </div>
 </section>
 
@@ -367,50 +371,29 @@
    <p>Analytics</p>
 </div>
 
-<script>
-        // Function to update the date and time every second
-        function updateDateTime() {
-            // Get the current date and time
-            let now = new Date();
-            let date = now.toLocaleDateString();
-            let time = now.toLocaleTimeString();
 
-            // Format the date and time with seconds
-            let dateTimeWithSeconds = `${date} ${time}`;
 
-            // Update the content of the <p> element with id "datetime"
-            document.getElementById("datetime").textContent = dateTimeWithSeconds;
-        }
-
-        // Update the date and time initially when the page loads
-        updateDateTime();
-
-        // Update the date and time every second
-        setInterval(updateDateTime, 1000);
-    </script>
 
 <section class="analitycs_section">
   <div class="analitics-box">  
     <div>
       <h5><u>Daily</u></h5>
-      <p id="datetime"></p>
-      <p>current Time</p>
+      <p id="current-date"></p>
+      <p id="current-time"></p>
       <p>Sold Today : ₹ 1000</p>
       <p>Products sold: 100</p>
       <p>Profit : ₹ 30000</p>
     </div>
     <div>
       <h5><u>Monthly</u></h5>
-      <p id="current Month"></p>
-      <p>Set Current Time</p>
+      <p id="current-month"></p>
       <p>Sold This month : ₹ 1000</p>
       <p>Products sold: 100</p>
       <p>Profit : ₹ 30000</p>
     </div>
     <div>
       <h5><u>Yearly</u></h5>
-      <p id="current Year"></p>
-      <p>Set Current Year</p>
+      <p id="current-year"></p>
       <p>Sold This Year : ₹ 1000</p>
       <p>Products sold: 100</p>
       <p>Profit : ₹ 30000</p>
@@ -441,7 +424,120 @@
 <!-- Analytics -->
 <!-- *********************************************************************** -->
 <!--  -->  
-  
+
+
+
+<script>
+function updateTime() {
+    // Create a new Date object for current time
+    var currentTime = new Date();
+
+    // Calculate IST offset in minutes (UTC +5:30)
+    var ISTOffset = 330;
+
+    // Calculate IST time using the provided method
+    var ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentTime.getTimezoneOffset()) * 60000);
+
+    // Extract components of IST time
+    var hours = ISTTime.getHours();
+    var minutes = ISTTime.getMinutes();
+    var seconds = ISTTime.getSeconds();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert hours from 24-hour to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Ensure minutes and seconds are two digits
+    minutes = (minutes < 10 ? '0' : '') + minutes;
+    seconds = (seconds < 10 ? '0' : '') + seconds;
+
+    // Build the time string in 12-hour format with AM/PM
+    var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+
+    // Build the date string in DD/MM/YYYY format
+    var dateString = ISTTime.toLocaleDateString('en-IN');
+
+    // Update the HTML elements
+    document.getElementById('current-time').textContent = 'Time : ' + timeString;
+    document.getElementById('current-date').textContent = 'Date : ' + dateString;
+}
+
+// Call updateTime function initially to avoid delay
+updateTime();
+
+// Update the time every second
+setInterval(updateTime, 1000);
+
+</script>
+
+<script>
+function updateMonthAndYear() {
+    // Create a new Date object for current time
+    var currentTime = new Date();
+
+    // Extract current month and year
+    var month = currentTime.toLocaleString('en-US', { month: 'long' });
+    var year = currentTime.getFullYear();
+
+    // Display month and year in the HTML elements
+    document.getElementById('current-month').textContent = ' Month: ' + month.toUpperCase();
+    document.getElementById('current-year').textContent = ' Year: ' + year;
+}
+
+// Call updateMonthAndYear function initially to set the initial display
+updateMonthAndYear();
+
+// This script does not update every second since month and year don't change frequently
+// If you need it to update periodically, use a setInterval similar to the previous examples
+
+</script>
+
+
+<!-- Low Stock Products -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+<div class='register'>
+   <p>Low Stock Products</p>
+</div>
+<section class="lowstockproducts">
+   <div class="lowstockbox">
+     <h5 class="lowstockhead">Low Stock Products</h5>
+     <div class="lowstocklist">
+         <p>Oil - 5</p>
+         <p>Drinks - 10</p>
+         <p>Eggs - 50 </p>
+         <p>Soaps - 10</p>
+         <p>Paste - 10</p>
+         <button class="lowstkbut">Send Remainder</button>
+     </div>
+   </div>
+</section>
+<!-- Low Stock Products -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+<script>
+// Function to add horizontal lines dynamically between <p> elements
+function addHorizontalLines() {
+  var paragraphs = document.querySelectorAll('.lowstocklist p');
+  paragraphs.forEach(function(para, index) {
+    if (index !== paragraphs.length - 1) {
+      // Create a <hr> element (horizontal line)
+      var hr = document.createElement('hr');
+      hr.style.width = '100%'; // Set the width of the <hr> to match the container
+      hr.style.margin = '0'; // Remove default margin
+      // Insert <hr> before the next <p> element
+      para.insertAdjacentElement('afterend', hr);
+    }
+  });
+}
+
+// Call the function initially to add horizontal lines
+addHorizontalLines();
+</script>
+
 </body>
 </html>
 <!--  -->
