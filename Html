@@ -102,6 +102,7 @@
         <li><i class="fa-solid fa-circle-arrow-right"></i> Save valuable time and money with informed decisions.</li>
         <li><i class="fa-solid fa-circle-arrow-right"></i> Find all the data here: Access comprehensive information.</li> 
         <li><i class="fa-solid fa-circle-arrow-right"></i> Choose the shop based on reviews.</li>
+        <li><i class="fa-solid fa-circle-arrow-right"></i> Daily and monthly buying analysis.</li>
       </ul>
       <button class="FSObutton" role="button"><span class="text">Get Started</span></button>
     </div>
@@ -270,7 +271,7 @@
   <thead>
     <tr>
       <th>Product Name</th>
-      <th>Price</th>
+      <th>Buying Price & Selling price</th>
       <th>Quantity</th>
       <th>Place</th>
     </tr>
@@ -306,7 +307,7 @@
 </table>
 
 <button type="submit" class="save-button">Save All</button>
-<p>Need to update while doing Django work. It is taking input=text class from above register login page. Item, Price, Quantity, Place.</p>
+<p>Need to update Buying Price & Selling price while doing Django work. It is taking input=text class from above register login page. Item, Price, Quantity, Place.</p>
   </div>
 </section>
 
@@ -341,14 +342,14 @@
                 <tr class="table-row">
                     <td class="product-name">Product 1</td>
                     <td class="quantity-editable" contenteditable="true">10</td>
-                    <td class="price-value">₹ 19.99</td>
+                    <td class="price-value">10 X ₹ 20 = ₹ 200</td>
                     <td class="place-value">New York</td>
                 </tr>
                 <tr class="table-row">
                     <td class="product-name">Product 2</td>
                     
                     <td class="quantity-editable" contenteditable="true">10</td>
-                    <td class="price-value">₹ 12.50</td>
+                    <td class="price-value">10 X ₹ 30 = ₹ 300</td>
                     <td class="place-value">Los Angeles</td>
                 </tr>
                 <!-- Additional rows can be dynamically added using JavaScript -->
@@ -383,6 +384,7 @@
   <div class="analitics-box">  
     <div>
       <h5><u>Daily</u></h5>
+      <button class="DSPbu">Daily selling products</button>
       <p id="current-date"></p>
       <p id="current-time"></p>
       <p>Sold Today : ₹ 1000</p>
@@ -391,6 +393,7 @@
     </div>
     <div>
       <h5><u>Monthly</u></h5>
+      <button class="MSPbu">Monthly selling products</button>
       <p id="current-month"></p>
       <p>Sold This month : ₹ 1000</p>
       <p>Products sold: 100</p>
@@ -398,6 +401,7 @@
     </div>
     <div>
       <h5><u>Yearly</u></h5>
+      
       <p id="current-year"></p>
       <p>Sold This Year : ₹ 1000</p>
       <p>Products sold: 100</p>
@@ -423,7 +427,7 @@
       <p>Least :- Rice,Masala,<p>
       </p>Jaggery,Dals</p>
       </div>
-  </div>   
+  </div>
 </section>
 
 <!-- Analytics -->
@@ -672,6 +676,46 @@ addHorizontalLines();
 </section>
 
 <!-- Know More / Digital Inventory -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+<!-- daily  and monthly selling products  -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+<div class='register'>
+   <p>seller from analytics page button to daily  and monthly selling products side by side 1) Owner Selling Aalytics & customer history</p>
+</div>
+<section class="DMSPsec">
+   <h1 class="DMASCH">SHOP NAME / CUSTOMER NAME</h1>
+   <div class="DMSPbox">
+      <div class="daily">
+         <h2 class="DSPBH"><u>Daily Selling Products</u></h2>
+         <h5 class="DSPH"> <u><i>   Product Name          Quantity         Price</u></i></h5>
+        <p class="DSPP">  Sunflower Oil          10         ₹ 140 </p>
+        <p class="DSPP">  Sunflower Oil          10         ₹ 140 </p>
+        <p class="DSPP">  Sunflower Oil          10         ₹ 140 </p>
+        <p class="DSPP">  Sunflower Oil          10         ₹ 140 </p>
+        <p class="DSPP">  Sunflower Oil          10         ₹ 140 </p>
+      </div>
+      <div class="monthly">
+         <h2 class="MSPBH"><u>Monthly Selling Products</u></h2>
+         <h5 class="MSPH"> <u><i>   Product Name           Quantity          Price</u></i></h5>
+         <p class="MSPP">   Sunflower Oil          10          ₹ 140 </p>
+         <p class="MSPP">   Sunflower Oil          10          ₹ 140 </p>
+         <p class="MSPP">   Sunflower Oil          10          ₹ 140 </p>
+         <p class="MSPP">   Sunflower Oil          10          ₹ 140 </p>
+         <p class="MSPP">   Sunflower Oil          10          ₹ 140 </p>
+      </div>
+   </div>
+</section>
+<!-- daily  and monthly selling products  -->
+<!-- *********************************************************************** -->
+<!--  -->
+
+
+
+<!-- customer analytics link from nearby stores  history of purchasing. 2) Customer Purchase History  -->
 <!-- *********************************************************************** -->
 <!--  -->
 
